@@ -26,9 +26,9 @@ public class DepartmentRestController {
         Employee loggedEmployee = (Employee) session.getAttribute("employee");
         if(loggedEmployee == null){
             System.out.println("Nema sesije!");
+            return ResponseEntity.badRequest().build();
         }else {
             departmentsList = departmentService.findDepartmentByEmployeeId(loggedEmployee.getId());
-            System.out.println(loggedEmployee);
         }
 
         //DepartmentDto dto = new DepartmentDto(dep);

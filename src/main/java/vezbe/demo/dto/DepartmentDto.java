@@ -18,6 +18,12 @@ public class DepartmentDto {
         this.company_department_name = dep.getCompany();
     }
 
+    public DepartmentDto(Long id, String department_name, Company company_department_name) {
+        this.id = id;
+        this.department_name = department_name;
+        this.company_department_name = company_department_name;
+    }
+
     public Long getId() {
         return id;
     }
